@@ -4,19 +4,19 @@ pipeline {
     stage('Build'){
       steps{
         echo "Make executable"
-        chmod +x helloworld.sh
+        sh 'chmod +x helloworld.sh'
       }
     }
     stage('Test'){
       steps{
         echo "Check contents"
-        cat helloworld.sh
+        sh 'cat helloworld.sh'
       }
     }
     stage('Deploy'){
       steps{
         "Run"
-        ./helloworld.sh
+        sh './helloworld.sh'
       }
     }
   }

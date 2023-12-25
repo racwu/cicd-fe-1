@@ -15,7 +15,7 @@ pipeline {
     }
     stage('Deploy'){
       steps{
-        "Run"
+        echo "Run"
         sh './helloworld.sh'
       }
     }
